@@ -2,7 +2,6 @@ from watchdog.observers import Observer
 import time
 from watchdog.events import FileSystemEventHandler
 import os
-import json
 
 
 class MyHandler(FileSystemEventHandler):
@@ -29,7 +28,6 @@ class MyHandler(FileSystemEventHandler):
                     time.sleep(5)
                     os.rename(src, new_destination)
                 except PermissionError or FileNotFoundError or InterruptedError or FileExistsError:
-                    # Errors
                     pass
 
 
