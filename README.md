@@ -34,20 +34,12 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-Python program that learns stock movement based on past and current data and buy/sells stocks accordingly
-* Implemented Alpaca Trading API to import data and create buy/sell orders
-* Designed AI software to predict the movement of stocks based on past data and current trends; creates buy/sell orders accordingly
-* Uploaded program to Google Cloud Storage to run infinitely on Google Cloud
-* Developed with Keras, Sklearn, Numpy, Pandas, and threading
+Python program that organizes different file types into different folders.
+* For example, all .docx files are moved into a "Documents" folder
 
 ### Built With
 * [Python](https://www.python.org/)
-* [Keras](https://keras.io/)
-* [scikit-learn](https://scikit-learn.org/)
-* [Numpy](https://numpy.org/)
-* [Pandas](https://pandas.pydata.org/)
-* [Google Cloud Platform](https://cloud.google.com/)
+* [watchdog](https://pypi.org/project/watchdog/)
 
 
 ## Getting Started
@@ -58,36 +50,26 @@ Python program that learns stock movement based on past and current data and buy
   ```
 
 ### Installation
-
-1. Get a free key_id and secret_key at [https://alpaca.markets/algotrading](https://alpaca.markets/algotrading)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/rexliu3/FileOrganizer.git
    ```
-3. Install requirement.txt
-   ```sh
-   pip3 install -r requirements.txt
+2. Enter the folder path in `Main.py`
+   ```py
+   folder_to_track = "ENTER FOLDER PATH HERE"
    ```
-4. Enter your key_id and secret_key in `Stock_Trading_Bot.py`
-   ```PY
-   super().__init__(key_id='ENTER YOUR KEY_ID',
-                                                secret_key='ENTER YOUR SECRET_KEY',
-                                                base_url='https://paper-api.alpaca.markets')
-   ```
-
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Simply run `main.py`: ``` python3 main.py ```
-
+Run `Main.py`: ``` python3 Main.py ```
+* The program will then begin monitoring the specified folder and organize documents into their appropriate folders
+* Note: you may need to create the following folders in the specified folder: "PDFs", "Images", "Program Downloads exe", "Videos", "Documents", "Unknown File Type"
 
 
 <!-- ROADMAP -->
 ## Roadmap
 See the [open issues](https://github.com/rexliu3/FileOrganizer/issues) for a list of proposed features (and known issues).
-
 
 
 <!-- CONTRIBUTING -->
